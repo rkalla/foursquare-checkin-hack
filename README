@@ -1,10 +1,24 @@
 foursquare Check-in Hack Utility
 http://www.thebuzzmedia.com/software/foursquare-check-in-hack-utility/
 
+
+License
+-------
+This library is released under the Apache 2 License. See LICENSE.
+
+
 Description
 -----------
-A utility that can be used to "Check-in" at any location on foursquare as long as a Venue ID and GPS coordinates are provided.
+A utility that can be used to "Check-in" at any location on foursquare as long 
+as a Venue ID and GPS coordinates are provided.
+
 
 Reference
 ---------
 Original Proof-of-Concept - http://compbio.cs.uic.edu/~mayank/4sq.html
+
+
+Contact
+-------
+If you have questions, comments or bug reports for this software please contact
+us at: software@thebuzzmedia.com
