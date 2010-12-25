@@ -30,6 +30,7 @@
 		<copy todir="${dir.dist}">
 			<fileset dir="${dir.scripts}" />
 		</copy>
+		<copy file="README" todir="${dir.dist}" />
 		<copy file="LICENSE" todir="${dir.dist}" />
 		<zip compress="no" basedir="${dir.src}" destfile="${dir.dist}/${name.file}-src.zip" />
 		<zip compress="no" basedir="${dir.dist}" destfile="${dir.dist}/${name.file}-${version.major}.${version.minor}.zip" />
