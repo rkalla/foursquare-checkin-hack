@@ -81,7 +81,7 @@ public class MainFrame extends javax.swing.JFrame {
         checkInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FourSquare Checkin Hack v1.1");
+        setTitle("FourSquare Checkin Hack");
         setName("mainFrame"); // NOI18N
         setResizable(false);
 
@@ -124,14 +124,14 @@ public class MainFrame extends javax.swing.JFrame {
 
         venueIDLabel.setText("Venue ID");
 
-        venueHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foursquarehack/resources/help-icon-16x16.png"))); // NOI18N
+        venueHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"))); // NOI18N
         venueHelpLabel.setToolTipText("Available from the URL of the venue you want to checkin to from FourSquare.com");
 
         venueIDTextField.setColumns(8);
 
         latTextField.setColumns(20);
 
-        longHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foursquarehack/resources/help-icon-16x16.png"))); // NOI18N
+        longHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"))); // NOI18N
         longHelpLabel.setToolTipText("Center the location you want on Google Maps, then check the \"link\" URL for the 'sll' value to get LAT/LONG (in that order)");
 
         latLabel.setText("Latitude");
@@ -140,7 +140,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         longTextField.setColumns(20);
 
-        latHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/foursquarehack/resources/help-icon-16x16.png"))); // NOI18N
+        latHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"))); // NOI18N
         latHelpLabel.setToolTipText("Center the location you want on Google Maps, then check the \"link\" URL for the 'sll' value to get LAT/LONG (in that order)");
 
         javax.swing.GroupLayout venuePanelLayout = new javax.swing.GroupLayout(venuePanel);
@@ -168,7 +168,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(longHelpLabel)
                             .addComponent(latHelpLabel))))
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         venuePanelLayout.setVerticalGroup(
             venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -16,7 +16,7 @@
 
 	<target name="compile" depends="clean">
 		<mkdir dir="${dir.bin}" />
-		<javac srcdir="${dir.src}" destdir="${dir.bin}" source="1.6" />
+		<javac srcdir="${dir.src}" destdir="${dir.bin}" source="1.6" debug="true" />
 		<copy todir="${dir.bin}">
 			<fileset dir="${dir.src}">
 				<exclude name="**/*.java" />

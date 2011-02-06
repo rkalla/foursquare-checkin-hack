@@ -166,7 +166,7 @@
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace pref="155" max="32767" attributes="0"/>
+                  <EmptySpace pref="147" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -221,7 +221,7 @@
         <Component class="javax.swing.JLabel" name="venueHelpLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/foursquarehack/resources/help-icon-16x16.png"/>
+              <Image iconType="3" name="/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Available from the URL of the venue you want to checkin to from FourSquare.com"/>
           </Properties>
@@ -239,7 +239,7 @@
         <Component class="javax.swing.JLabel" name="longHelpLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/foursquarehack/resources/help-icon-16x16.png"/>
+              <Image iconType="3" name="/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Center the location you want on Google Maps, then check the &quot;link&quot; URL for the &apos;sll&apos; value to get LAT/LONG (in that order)"/>
           </Properties>
@@ -262,7 +262,7 @@
         <Component class="javax.swing.JLabel" name="latHelpLabel">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/foursquarehack/resources/help-icon-16x16.png"/>
+              <Image iconType="3" name="/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Center the location you want on Google Maps, then check the &quot;link&quot; URL for the &apos;sll&apos; value to get LAT/LONG (in that order)"/>
           </Properties>
