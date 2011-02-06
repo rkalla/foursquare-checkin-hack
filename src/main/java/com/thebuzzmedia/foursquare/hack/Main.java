@@ -34,6 +34,7 @@ public class Main {
 	public static final String VENUE_ID_PREF_KEY = "vid";
 	public static final String LATITUDE_PREF_KEY = "lat";
 	public static final String LONGITUDE_PREF_KEY = "lng";
+        public static final String PRIVATE_PREF_KEY = "private";
 
 	public static final String HOSTNAME = "api.foursquare.com";
 	public static final String API_URL = "http://" + HOSTNAME
