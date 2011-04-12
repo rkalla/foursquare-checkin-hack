@@ -75,13 +75,16 @@ public class MainFrame extends javax.swing.JFrame {
         longLabel = new javax.swing.JLabel();
         longTextField = new javax.swing.JTextField();
         latHelpLabel = new javax.swing.JLabel();
+        shoutLabel = new javax.swing.JLabel();
+        shoutTextField = new javax.swing.JTextField();
+        shoutHelpLabel = new javax.swing.JLabel();
         statusPanel = new javax.swing.JPanel();
         statusLabel = new javax.swing.JLabel();
         rememberCheckBox = new javax.swing.JCheckBox();
         checkInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FourSquare Checkin Hack");
+        setTitle("FourSquare Checkin Hack v1.1");
         setName("mainFrame"); // NOI18N
         setResizable(false);
 
@@ -143,6 +146,11 @@ public class MainFrame extends javax.swing.JFrame {
         latHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"))); // NOI18N
         latHelpLabel.setToolTipText("Center the location you want on Google Maps, then check the \"link\" URL for the 'sll' value to get LAT/LONG (in that order)");
 
+        shoutLabel.setText("Message");
+
+        shoutHelpLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/thebuzzmedia/foursquare/hack/resources/help-icon-16x16.png"))); // NOI18N
+        shoutHelpLabel.setToolTipText("Message that will be included along with your check-in.");
+
         javax.swing.GroupLayout venuePanelLayout = new javax.swing.GroupLayout(venuePanel);
         venuePanel.setLayout(venuePanelLayout);
         venuePanelLayout.setHorizontalGroup(
@@ -155,17 +163,20 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(longLabel)
                             .addComponent(venueIDLabel)
-                            .addComponent(latLabel))
+                            .addComponent(latLabel)
+                            .addComponent(shoutLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(venuePanelLayout.createSequentialGroup()
                                 .addComponent(venueIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(venueHelpLabel))
-                            .addComponent(latTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(longTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(latTextField)
+                            .addComponent(longTextField)
+                            .addComponent(shoutTextField))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(shoutHelpLabel)
                             .addComponent(longHelpLabel)
                             .addComponent(latHelpLabel))))
                 .addContainerGap(147, Short.MAX_VALUE))
@@ -193,6 +204,12 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(longLabel)
                         .addComponent(longTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(longHelpLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(venuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(shoutTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(shoutLabel))
+                    .addComponent(shoutHelpLabel))
                 .addContainerGap())
         );
 
@@ -256,7 +273,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-416)/2, (screenSize.height-300)/2, 416, 300);
+        setBounds((screenSize.width-416)/2, (screenSize.height-340)/2, 416, 340);
     }// </editor-fold>//GEN-END:initComponents
 
     private void clearPrefs() {
@@ -402,7 +419,11 @@ public class MainFrame extends javax.swing.JFrame {
         updateStatusDisplay("Generating API query string...", DEFAULT_STATUS_COLOR);
 
         // Create the query string to be posted to the API
-        String args = "vid=" + venueIDTextField.getText() + "&private=" + (privateCheckBox.isSelected() ? '1' : '0') + "&geolat=" + lat + "&geolong=" + lng;
+        String args = "vid=" + venueIDTextField.getText() 
+                    + (shoutTextField.getText().trim().length() > 0 ? "&shout=" + shoutTextField.getText().trim() : "")
+                    + "&private=" + (privateCheckBox.isSelected() ? '1' : '0')
+                    + "&geolat=" + lat
+                    + "&geolong=" + lng;
 
         updateStatusDisplay("Processing Preferences...", DEFAULT_STATUS_COLOR);
 
@@ -482,6 +503,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JCheckBox privateCheckBox;
     private javax.swing.JCheckBox rememberCheckBox;
+    private javax.swing.JLabel shoutHelpLabel;
+    private javax.swing.JLabel shoutLabel;
+    private javax.swing.JTextField shoutTextField;
     private javax.swing.JLabel statusLabel;
     private javax.swing.JPanel statusPanel;
     private javax.swing.JLabel venueHelpLabel;
