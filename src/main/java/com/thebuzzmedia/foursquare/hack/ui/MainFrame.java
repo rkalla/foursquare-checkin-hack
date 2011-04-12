@@ -84,7 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
         checkInButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("FourSquare Checkin Hack v1.1");
+        setTitle("FourSquare Checkin Hack");
         setName("mainFrame"); // NOI18N
         setResizable(false);
 
